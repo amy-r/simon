@@ -1,2 +1,2 @@
 ## Simon, a memory game
-#### Clone down the repo, npm install, and enjoy!
+#### Clone down the repo, yarn install, and enjoy!
