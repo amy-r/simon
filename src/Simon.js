@@ -25,30 +25,26 @@ export default class Simon extends Component {
 		}, 2000);
 	}
 
+	nextColor = (index) => {
+		this.incrementIndex();
+		this.setActiveColor(index);
+		this.waitAndRecall();
+	}
+
 	getActiveColor = (index) => {
 		if (index === null) {
 			this.setState({ activeColor: this.props.colors[0], index: 0 });
 			this.waitAndRecall();
 		} else if (index === 0) {
-			this.incrementIndex();
-			this.setActiveColor(0);
-			this.waitAndRecall();
+			this.nextColor(0);
 		} else if (index === 1) {
-			this.incrementIndex()
-			this.setActiveColor(1);
-			this.waitAndRecall();
+			this.nextColor(1);
 		} else if (index === 2) {
-			this.incrementIndex();
-			this.setActiveColor(2);
-			this.waitAndRecall();
+			this.nextColor(2);
 		} else if (index === 3) {
-			this.incrementIndex();
-			this.setActiveColor(3);
-			this.waitAndRecall();
+			this.nextColor(3);
 		} else if (index === 4) {
-			this.incrementIndex();
-			this.setActiveColor(4)
-			this.waitAndRecall();
+			this.nextColor(4);
 		} else if (index === 5) {
 			this.incrementIndex();
 		}
