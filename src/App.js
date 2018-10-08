@@ -8,7 +8,6 @@ class App extends Component {
     super();
     this.state = {
       colors: null,
-      index: null,
     }
   }
 
@@ -35,13 +34,16 @@ class App extends Component {
     this.getColors(this.randomNumbers());
   }
 
+  checkColors = (userGuess) => {
+    if (userGuess.toString() === this.state.colors.toString()) {
+      alert("you win")
+    }
+  }
+
   render() {
     return (
       <div className="App">
-        <h1>
-          App
-        </h1>
-        <Simon colors={this.state.colors} index={this.state.index} />
+        <Simon colors={this.state.colors} checkColors={this.checkColors} />
       </div>
     );
   }

@@ -1,0 +1,27 @@
+
+.block {
+    margin: auto;
+    height: 100px;
+    width: 100px;
+    color: black;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.lighten {
+    opacity: 0.6;
+}
